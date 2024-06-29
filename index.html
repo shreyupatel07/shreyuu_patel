@@ -13,23 +13,24 @@
       <a-assets>
          
         
-          <!-- <video src="./fmsol.mp4"
+          <video src="./Background.mp4"
                 preload="auto" id="vid" response-type="arraybuffer" loop  
                 crossorigin webkit-playsinline autoplay="false" playsinline>
-            </video> -->
-        <img id="btninsta" src="./insta_btn.png" crossorigin="anonymous">
-        <img id="btnphone" src="./call.png" crossorigin="anonymous">
+            </video>
+        <img id="btnfb" src="./fb.jpg" crossorigin="anonymous">
+        <img id="btninsta" src="./instagram.webp" crossorigin="anonymous">
+        <img id="btnyt" src="./youtube.jpg" crossorgin="anonymous">
 
       </a-assets>
       <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: 10000; objects: .clickable"></a-camera>
 
-      <!-- <a-entity id="example-target" mindar-image-target="targetIndex: 0">
+      <a-entity id="example-target" mindar-image-target="targetIndex: 0">
         
          <a-video id="example-plane" class="clickable" src="#vid" position='0 0 0' rotation='0 0 0' width='1.5' height='1'>
             </a-video>
-        <a-entity id="playbtn" class="clickable" geometry="primitive: plane; height: 0.3; width: 0.3;" position="0 0 0.1" rotation="0 0 0" material="src: #play; opacity: 1; transparent: true;"></a-entity>  -->
-        <a-entity id="insta_click" class="clickable" geometry="primitive: plane; height: 0.3; width: 0.3;" position="0 -0.9 0" rotation="0 0 0" material="src: #btninsta; opacity: 1; transparent: true;"></a-entity>
-      <a-entity id="call_click" class="clickable"  geometry="primitive: plane; height: 0.3; width: 0.3;" position="0 0 0" rotation="0 0 0" material="src: #btnphone; opacity: 1; transparent: true;"></a-entity>
+        <a-entity id="playfb" class="clickable" geometry="primitive: plane; height: 0.3; width: 0.3;" position="0 3 4" rotation="0 0 0" material="src: #btnfb; opacity: 1; transparent: true;"></a-entity> 
+        <a-entity id="insta_click" class="clickable" geometry="primitive: plane; height: 0.3; width: 0.3;" position="0 2 0" rotation="0 0 0" material="src: #btninsta; opacity: 1; transparent: true;"></a-entity>
+      <a-entity id="playyt" class="clickable"  geometry="primitive: plane; height: 0.3; width: 0.3;" position="0 3 0" rotation="0 0 0" material="src: #btnyt; opacity: 1; transparent: true;"></a-entity>
        
       </a-entity>   
     </a-scene>
@@ -47,23 +48,23 @@
         console.log("target lost");
       });
 
-      // const examplePlane = document.querySelector('#playbtn');
-      // examplePlane.addEventListener("click", event => {
-       // document.querySelector("#vid").play();
-       // examplePlane.remove();
-       //});
+       const examplePlane = document.querySelector('#');
+       examplePlane.addEventListener("click", event => {
+        document.querySelector("#vid").play();
+        examplePlane.remove();
+       });
 
-        //const insta_click = document.querySelector('#insta_click');
-        //insta_click.addEventListener("click", event => {
-      // window.location.href = "https://instagram.com/fmullasol";
-      // });
+        const  playfb = document.querySelector('#playfb');
+        playfb.addEventListener("click", event => {
+       window.location.href = "https://www.youtube.com/";
+       });
+
+        const insta_click = document.querySelector('#insta_click');
+        insta_click.addEventListener("click", event => {
+       window.location.href = "https://www.instagram.com/?hl=en";
+       });
       
-       const call_click = document.querySelector('#call_click');
-        call_click.addEventListener("click", event => {
-       window.location.href = "elt:+9426983936";
+       const playyt = document.querySelector('#playyt');
+        playyt.addEventListener("click", event => {
+       window.location.href = "https://www.facebook.com/index.php/";
        })
-
-
-    </script>
-  </body>
-</html>
